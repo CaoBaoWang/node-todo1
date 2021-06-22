@@ -1,25 +1,21 @@
 Arguments: 
-  D:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+  D:\Program Files\nodejs\node.exe D:\Program Files (x86)\Yarn\bin\yarn.js install
 
 PATH: 
-  C:\Users\ext.wangshaoli1\AppData\Local\Programs\Git\mingw64\bin;C:\Users\ext.wangshaoli1\AppData\Local\Programs\Git\usr\bin;C:\Users\ext.wangshaoli1\bin;C:\Python39\Scripts;C:\Python39;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin;C:\Users\ext.wangshaoli1\AppData\Roaming\nvm;D:\Program Files\nodejs;D:\Program Files\nodejs;C:\Users\ext.wangshaoli1\AppData\Local\Microsoft\WindowsApps;C:\Users\ext.wangshaoli1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ext.wangshaoli1\AppData\Local\JetBrains\WebStorm 2021.1.2\bin;C:\Users\ext.wangshaoli1\AppData\Local\Programs\Git\cmd;C:\Users\ext.wangshaoli1\AppData\Local\nvs;C:\Users\ext.wangshaoli1\AppData\Local\Yarn\bin;C:\Users\ext.wangshaoli1\AppData\Roaming\nvm;D:\Program Files\nodejs;C:\Users\ext.wangshaoli1\AppData\Roaming\npm
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;d:\Program Files\Git\cmd;%GIT_HOME%\bin;D:\Program Files\nodejs\;C:\Program Files (x86)\dotnet\;%ANDROID_SDK_HOME%;D:\Program Files\flutter\bin;C:\Program Files (x86)\NetSarang\Xftp 7\;C:\Program Files (x86)\NetSarang\Xshell 7\;D:\2.Android\Sdk\platform-tools;%cmder%;D:\Program Files (x86)\Yarn\bin\;C:\Android;C:\Windows\System32;C:\Users\11255\AppData\Local\Microsoft\WindowsApps;;d:\Program Files\JetBrains\WebStorm 2020.2.3\bin;;C:\Users\11255\AppData\Roaming\npm;D:\Program Files\Microsoft VS Code\bin;C:\Users\11255\AppData\Local\Yarn\bin
 
 Yarn version: 
   1.22.5
 
 Node version: 
-  14.17.0
+  14.15.1
 
 Platform: 
   win32 x64
 
 Trace: 
-  SyntaxError: C:\Users\ext.wangshaoli1\WebstormProjects\Demos\node-todo-1\package.json: Unexpected token s in JSON at position 143
-      at JSON.parse (<anonymous>)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+  Error: connect ETIMEDOUT 172.28.60.55:80
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
 
 npm manifest: 
   {
@@ -31,7 +27,6 @@ npm manifest:
       "commander": "^3.0.2"
     }
   }
-  s
 
 yarn manifest: 
   No manifest
@@ -41,7 +36,7 @@ Lockfile:
   # yarn lockfile v1
   
   
-  commander@^7.2.0:
-    version "7.2.0"
-    resolved "http://registry.m.jd.com/commander/download/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
-    integrity sha1-o2y1fQtQHOEI5NIFWaFQo5HZerc=
+  commander@^3.0.2:
+    version "3.0.2"
+    resolved "http://registry.m.jd.com/commander/download/commander-3.0.2.tgz#6837c3fb677ad9933d1cfba42dd14d5117d6b39e"
+    integrity sha1-aDfD+2d62ZM9HPukLdFNURfWs54=
