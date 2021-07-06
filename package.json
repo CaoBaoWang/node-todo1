@@ -4,8 +4,11 @@
     "t": "cli.js"
   },
   "files": [
-   "*.js"
+    "*.js"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",
@@ -15,5 +18,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "jest": "^27.0.5"
   }
 }
