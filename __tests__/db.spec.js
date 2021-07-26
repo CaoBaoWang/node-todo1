@@ -1,12 +1,12 @@
 const db = require('../db')
+const fs = require('fs')
 jest.mock('fs')
 
 describe('db',()=> {
-    it('can read', ()=>{
-        expect(db.read instanceof Function).toBe(true)
-    })
-    it('can write', ()=> {
-        expect(db.write instanceof Function).toBe(true)
-
+    it('can read',  async ()=>{
+        const data = [{title: 'hi', done: true}]
+        fs.setMock('/xxx',null,JSON.stringify(data))
+        const list =  await db.read('/xxx')
+        expect(list).toStrictEqual(data)
     })
 })
