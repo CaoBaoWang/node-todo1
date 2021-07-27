@@ -7,7 +7,7 @@ const dbpath = p.join(home, '.todo')
 const db = {
     read(path = dbpath) {
         return new Promise((resolve, reject) => {
-            fs.readFile(dbpath, {flag: 'a+'}, (error, data) => {
+            fs.readFile(path, {flag: 'a+'}, (error, data) => {
                 if (error)
                     return reject(error)
                 let list
@@ -26,7 +26,7 @@ const db = {
     write(list, path = dbpath) {
         return new Promise((resolve, reject) => {
             const str = JSON.stringify(list)
-            fs.writeFile(dbpath, str, (error) => {
+            fs.writeFile(path, str, (error) => {
                 if (error)
                     return reject(error)
                 else
