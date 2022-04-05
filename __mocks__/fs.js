@@ -2,7 +2,7 @@ const fs =  jest.genMockFromModule('fs')
 const _fs = jest.requireActual('fs')
 Object.assign(fs, _fs)
 const mocks = {}
-fs.setMock = (path, error, data) => {
+fs.setReadMock = (path, error, data) => {
     mocks[path] = [error, data]
 }
 
@@ -17,6 +17,21 @@ fs.readFile = (path, options , callback) => {
         _fs.readFile(path, options , callback)
 
     }
+}
+
+const writeMocks = {}
+
+fs.setWriteMock = (file,fn) => {
+    writeMocks[file] = fn;
+}
+
+fs.writeFile = (file,data ,option, callback) =>{
+    if(callback === undefined) callback  = option
+    const fn = writeMocks[file];
+    if(fn instanceof Function) {
+        fn(file,data ,option, callback)
+    }
+
 }
 
 module.exports  = fs

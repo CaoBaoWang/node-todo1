@@ -26,7 +26,7 @@ const db = {
     write(list, path = dbpath) {
         return new Promise((resolve, reject) => {
             const str = JSON.stringify(list)
-            fs.writeFile(path, str, (error) => {
+            fs.writeFile(path, str+'\n', (error) => {
                 if (error)
                     return reject(error)
                 else
